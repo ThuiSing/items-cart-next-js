@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+.accordion-button:not(.collapsed) {
+  color: #000000 !important;
+  background-color: #cfd1d4 !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
