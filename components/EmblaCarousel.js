@@ -3,9 +3,9 @@ import Image from "next/image";
 import styles from "../styles/embla.module.css";
 import useEmblaCarousel from "embla-carousel-react";
 import { Thumb } from "./EmblaCarouselThumb";
-import { mediaByIndex } from "./Media/media";
+// import { mediaByIndex } from "./Media/media";
 
-const EmblaCarousel = ({ slides }) => {
+const EmblaCarousel = ({ slides, images }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [mainViewportRef, embla] = useEmblaCarousel({ skipSnaps: false });
   const [thumbViewportRef, emblaThumbs] = useEmblaCarousel({
@@ -13,6 +13,10 @@ const EmblaCarousel = ({ slides }) => {
     selectedClass: "",
     dragFree: true,
   });
+
+  // media
+  const media = images;
+  const mediaByIndex = (index) => media[index % media.length];
 
   const onThumbClick = useCallback(
     (index) => {
