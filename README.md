@@ -1,6 +1,6 @@
 ## Live Site : https://shopping-cart-eight-orpin.vercel.app/
 
-### Description
+### Short Description
 
 <ul> 
 <li> Next js app</li>
