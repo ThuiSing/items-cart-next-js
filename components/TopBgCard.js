@@ -3,6 +3,7 @@ import { Accordion, Button, Col, Container, Form, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import BgImage from "../images/bg.jpg";
 import EmblaCarousel from "./EmblaCarousel";
+
 const TopBgCard = () => {
   const SLIDE_COUNT = 10;
   const slides = Array.from(Array(SLIDE_COUNT).keys());
@@ -11,7 +12,7 @@ const TopBgCard = () => {
   return (
     <div>
       <div>
-        <Image src={BgImage} className="opacity-50" alt="" />
+        <Image src={BgImage} className="opacity-50" alt="backgroundImage" />
       </div>
 
       {/* Another card */}
@@ -33,8 +34,10 @@ const TopBgCard = () => {
             <EmblaCarousel slides={slides} images={selectedProduct?.img} />
           </Col>
           <Col md={6}>
-            <h3>{selectedProduct?.name}</h3>
-            <h3>${selectedProduct?.price} </h3>
+            <h3 className="text-uppercase mb-3 fw-bolder">
+              {selectedProduct?.name}
+            </h3>
+            <p className="fs-3">${selectedProduct?.price} </p>
 
             {/* Accordion */}
             <Accordion defaultActiveKey="0" className="my-4">

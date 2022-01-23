@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import Products from "../components/Products";
 import PromisedSection from "../components/PromisedSection";
 import TopBgCard from "../components/TopBgCard";
